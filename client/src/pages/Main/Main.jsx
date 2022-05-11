@@ -47,7 +47,7 @@ const Main = () => {
   return (
     <div className="grid grid-cols-12 w-full h-full relative">
       <div className="col-span-12">
-        <Topbar sidebar={sidebar} setSidebar={setSidebar} width={width} />
+        <Topbar sidebar={sidebar} setSidebar={setSidebar} />
       </div>
       <motion.div
         className={`sidebar lg:flex flex fixed z-30 top-0  bottom-0 flex-col overflow-y-auto border-r border-border-main-color px-10 py-7  text-font-sec bg-white  font-Poppins `}

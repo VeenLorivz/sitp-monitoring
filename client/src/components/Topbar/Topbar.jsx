@@ -5,9 +5,7 @@ import { userRequest } from "../../requestMethods";
 import { Link } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 
-import "./topbar.css";
-
-const Topbar = ({ setSidebar, sidebar, width }) => {
+const Topbar = ({ setSidebar, sidebar }) => {
   const user = useSelector((state) => state.user.currentUser);
   const [profile, setProfile] = useState();
 
@@ -26,13 +24,7 @@ const Topbar = ({ setSidebar, sidebar, width }) => {
   return (
     <nav className="topbar flex w-full h-20 pr-8 pl-9 items-center border-b border-border-main-color bg-white  font-Poppins">
       <AiOutlineMenu
-        className={
-          sidebar
-            ? width >= 1024
-              ? "text-2xl cursor-pointer slide-in"
-              : "text-2xl cursor-pointer slide-out"
-            : "text-2xl cursor-pointer slide-in"
-        }
+        className="text-2xl cursor-pointer"
         onClick={() => setSidebar(!sidebar)}
       />
       {profile && (
